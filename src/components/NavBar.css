@@ -1,0 +1,11 @@
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    /* background-color: #0a97b0;
+    color: white; */
+    font-size: 30px;
+  }
