@@ -1,25 +1,26 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Navbar from 'react-bootstrap/Navbar';
+import React from 'react'
+import Timer from './Calculator/Timer'
+import Counter from './Calculator/Counter'
+import Multiplication from './Calculator/Multiplication'
+import './Calculator.css'
 
-function Calculator() {
-    return (
-        <Container>
-            <Row>
-                <Navbar bg="dark" data-bs-theme="dark">
-                    <Container>
-                        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                    </Container>
-                </Navbar>
-            </Row>
-            <Row>
-                <Col>1 of 3</Col>
-                <Col>2 of 3</Col>
-                <Col>3 of 3</Col>
-            </Row>
-        </Container>
-    );
+const Calculator = (props) => {
+  const { toggleCalculatorEnd, toggleCalculatorCheckAnswer, caculatorScore, caculatorTime, caculatorQuestion } = props;
+  return (
+    <div>
+        <div className="unit-control">
+            <Timer caculatorTime={caculatorTime}/>
+            <span className="exchange-icon fa-fw fa-stack">
+                <i className="far fa-circle fa-stack-2x" ></i>
+                <i className="fas fa-exchange-alt fa-stack-1x" ></i>
+            </span>
+            <Counter caculatorScore={caculatorScore}/>
+            </div>
+            <div className="component-control">
+            <Multiplication toggleCalculatorEnd={toggleCalculatorEnd} toggleCalculatorCheckAnswer={toggleCalculatorCheckAnswer} caculatorQuestion={caculatorQuestion}/>
+        </div>
+    </div>
+  )
 }
 
-export default Calculator;
+export default Calculator

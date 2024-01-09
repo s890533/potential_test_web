@@ -22,21 +22,15 @@ body {
   flex-direction: column;
   box-shadow: 1px 1px 10px 1px #134c76;
   border-radius: 7px;
-  background: white;
-  min-width: 440px;
+  /* background: white; */
+  background: rgb(90, 90, 90);
+  min-width: 350px;
   min-height: 620px;
 }
 
 .card-body {
   flex: 1;
-  padding: 30px;
-}
-
-.unit-control {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 15px;
+  padding: 15px 30px;
 }
 
 .component-control {

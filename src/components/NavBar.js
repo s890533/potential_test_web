@@ -1,13 +1,14 @@
+import Navbar from 'react-bootstrap/Navbar';
 import React from 'react'
 import './NavBar.css'
-import Navbar from 'react-bootstrap/Navbar';
+
+
 
 const NavBar = () => {
   return (
     <div>
-      <Navbar bg="primary" data-bs-theme="dark" className='nav-bar'>
-        <Navbar.Brand>Network Speed Converter</Navbar.Brand>
-        
+      <Navbar bg="dark" data-bs-theme="dark" className='nav-bar'>
+        <Navbar.Brand>Simulator Test Assistant</Navbar.Brand>
       </Navbar>
     </div>
   )
