@@ -9,7 +9,7 @@ const Calculator = (props) => {
   return (
     <div>
         <div className="unit-control">
-            <Timer caculatorTime={caculatorTime}/>
+            <Timer caculatorTime={caculatorTime} singleTimeSuspend={false}/>
             <span className="exchange-icon fa-fw fa-stack">
                 <i className="far fa-circle fa-stack-2x" ></i>
                 <i className="fas fa-exchange-alt fa-stack-1x" ></i>

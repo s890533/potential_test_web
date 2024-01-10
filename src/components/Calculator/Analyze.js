@@ -1,14 +1,14 @@
 import React from 'react'
-import { Fade } from 'react-bootstrap';
-import calculateTimeDifference from '../../utils/time';
+import {calculateTimeDifference, timeDifferenceToString, secondToString} from '../../utils/time';
 
 const Analyze = (props) => {
     const { caculatorScore, caculatorTime} = props;
 
-    const totalTime = calculateTimeDifference(caculatorTime.startTime, caculatorTime.endTime);
+    const totalTime = timeDifferenceToString(calculateTimeDifference(caculatorTime.startTime, caculatorTime.endTime));
+    const averageTime = secondToString(caculatorTime.timeStampRecord.reduce((a, b) => a + b, 0) / caculatorTime.timeStampRecord.length);
 
     if (caculatorScore.totalAmount === 0){
-        //return ''
+        return ''
     }
 
     return (
@@ -17,7 +17,7 @@ const Analyze = (props) => {
             <span style={{ color: 'white' }}>
                 Last Result:&nbsp;
                 <span style={{ color: 'green', fontWeight: 'bold' }}>{caculatorScore.correctAmount}</span>&nbsp;/&nbsp;
-                <span style={{ color: 'red', fontWeight: 'bold' }}>{caculatorScore.errorAmount}</span>&nbsp;/&nbsp;
+                <span style={{ color: 'red', fontWeight: 'bold' }}>{caculatorScore.wrongAmount}</span>&nbsp;/&nbsp;
                 <span style={{ fontWeight: 'bold' }}>{caculatorScore.totalAmount}</span>
             </span>
             </div>
@@ -26,7 +26,7 @@ const Analyze = (props) => {
                 Total Time:&nbsp;
                 <span style={{ fontWeight: 'bold' }}>{totalTime}<br></br></span>
                 Avr. Time:&nbsp;
-                <span style={{ fontWeight: 'bold' }}>1:00</span>
+                <span style={{ fontWeight: 'bold' }}>{averageTime}</span>
             </span>
             </div>
         </div>

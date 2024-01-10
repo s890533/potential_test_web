@@ -7,7 +7,7 @@ const Counter = (props) => {
     <div>
       <Badge bg="dark" style={{ fontSize: '15px' }}>
       <span style={{ color: 'green'}}>{caculatorScore.correctAmount}</span>&nbsp;/&nbsp;
-        <span style={{ color: 'red'}}>{caculatorScore.errorAmount}</span>&nbsp;/&nbsp;
+        <span style={{ color: 'red'}}>{caculatorScore.wrongAmount}</span>&nbsp;/&nbsp;
         <span>{caculatorScore.totalAmount}</span>
       </Badge>
     </div>
